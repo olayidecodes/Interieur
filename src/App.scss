@@ -1,0 +1,137 @@
+.App {
+    position: relative;
+}
+
+// Menu Section
+
+menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+        img {
+            width: 1.7rem;
+        }
+    }
+
+    ul {
+        list-style: none;
+        display: flex;
+        gap: 4.5rem;
+    }
+
+    .toggle {
+        display: flex;
+        gap: .6rem;
+        flex-direction: column;
+        cursor: pointer;
+
+        span {
+            width: 1.5rem;
+            height: 2px;
+            border: none;
+            transition: rotate .5s ease-in-out 0s, transform .5s ease-in-out 0s;
+
+            &:nth-child(1) {
+                background-color: var(--color-orange);
+            }
+            &:nth-child(2) {
+                background-color: var(--color-black);
+            }
+        }
+
+        &:hover {
+            span {
+                &:nth-child(1) {
+                    rotate: 45deg;
+                    transform: translateY(.5rem);
+                }
+                &:nth-child(2) {
+                    rotate: -45deg;
+                    transform: translateY(-.5rem);
+                }
+            }
+        }
+    }
+
+    .menu_smallscreen{
+        display: none;
+
+        .menu_smallscreen_overlay{
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: var(--color-black);
+            transition: 0.5s ease;
+            flex-direction: column;
+            z-index: 5;
+        
+        }
+    }
+    
+    
+    
+    .menu_smallscreen-links{
+        list-style: none;
+    }
+    
+    .menu_smallscreen-links li{
+        margin: 2rem;
+        cursor: pointer;
+        color: var(--color-golden);
+        font-size: 2rem;
+        text-align: center;
+        font-family: var(--font-base);
+    }
+    
+    .menu_smallscreen-links li:hover{
+        color: var(--color-white);
+    }
+    
+    @media screen and (max-width: 2000px){
+        .app__navbar-logo img{
+            width: 210px;
+        }
+    }
+    
+    @media screen and (max-width: 1150px) {
+        .app__navbar-links{
+            display: none;
+        }
+        .menu_smallscreen{
+            display: flex;
+        }
+    }
+    
+    @media screen and (max-width: 650px){
+        .app__navbar-logo img{
+            width: 110px;
+        }
+        .app__navbar-login{
+            display: none;
+        }
+        .app__navbar{
+            padding: 1rem;
+        }
+    }
+}
+
+// App Banner
+
+.app__banner {
+    display: flex;
+    gap: 2rem;
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        h1 {
+            font-size: 100%;
+            background-color: aquamarine;
+        }
+    }
+}
