@@ -1,5 +1,23 @@
 import images from './images';
 
+const about = [
+  {
+    title: "300",
+    symbol: "+",
+    sub: "Success project"
+  },
+  {
+    title: "200",
+    symbol: "+",
+    sub: "Product launches"
+  },
+  {
+    title: "180",
+    symbol: "k",
+    sub: "Happy customer"
+  }
+]
+
 const projects = [
   {
     imgUrl: images.home_redesign,
@@ -23,4 +41,5 @@ const projects = [
   }
 ];
 
-export default { projects };
+
+export default { about, projects };

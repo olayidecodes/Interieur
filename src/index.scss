@@ -39,6 +39,12 @@ button {
   cursor: pointer;
 }
 
+.sub {
+    font-size: .9rem;
+    color: var(--dark-gray);
+    letter-spacing: 1px;
+}
+
 .small__button {
   background-color: var(--color-orange);
   color: var(--color-white);
@@ -46,6 +52,18 @@ button {
   border-radius: 20px;
   font-size: 1.4rem;
   cursor: pointer;
+}
+
+.smaller__button {
+  display: flex;
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  padding: .27rem .8rem;
+  border-radius: 20px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  border: none;
+  
 }
 
 .big__button {
@@ -61,54 +79,82 @@ button {
 }
 
 .section__padding {
-    padding: 2rem 5%;
+    margin: 0 5%;
 }
 
 section {
-    border-top: 1px solid var(--light-gray);
+  padding: 5rem 0;
+  border-bottom: 2px solid var(--light-gray);
+
+  // @media screen and (max-width: 600px){
+  //   padding: 0rem 0;
+  // }
 }
+
+
 
 .slide-bottom {
   -webkit-animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-@-webkit-keyframes slide-bottom {
-  0% {
-    -webkit-transform: translateY(-25%);
-            transform: translateY(-25%);
+@media screen and (max-width: 900px) {
+  .big__button {
+  padding: .4rem .8rem;
+  gap: .2rem;
+  p {
+      font-size: .8rem;
   }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+
+  .icon {
+      font-size: .9rem;
   }
+}
+  
 }
 
-@keyframes slide-bottom {
-  0% {
-    -webkit-transform: translateY(-25%);
-            transform: translateY(-25%);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
+@media screen and (max-width: 700px) {
+  .big__button {
+    padding: .1rem .2rem;
+    width: inherit;
+    gap: .1rem;
+    align-items: center;
+    justify-content: center;
+    p {
+        font-size: .8rem;
+    }
+
+    .icon {
+        font-size: .9rem;
+    }
+}
 }
 
-@media screen and (max-width: 1200px){
-  .section__padding {
-    padding: 2rem 10%;
-  }
-}
+// @media screen and (max-width: 1200px){
+//   .section__padding {
+//     padding: 2rem 10%;
+//   }
+// }
 
-@media screen and (max-width: 1000px){
-  .section__padding {
-    padding: 2rem 7%;
-  }
-}
+// @media screen and (max-width: 1000px){
+//   .section__padding {
+//     margin: 0 5%;
+// }
 
-@media screen and (max-width: 700px){
-  .section__padding {
-    padding: 2rem 7%;
-  }
-}
+// section {
+//   padding: 2rem 0;
+//   border-bottom: 2px solid var(--light-gray);
+// }
+// }
+
+// @media screen and (max-width: 700px){
+//   .section__padding {
+//     margin: 0 5%;
+// }
+
+// section {
+//   padding: 5rem 0;
+//   border-bottom: 2px solid var(--light-gray);
+// }
+// }
+

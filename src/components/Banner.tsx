@@ -4,7 +4,7 @@ import { BsArrowRight, BsArrowDown } from "react-icons/bs"
 
 const Banner = () => {
   return (
-    <div className='section section__padding app__banner'>
+    <section className='section section__padding app__banner'>
         <div className="left">
             <h1>Transform<br />your space</h1>
             <div className="buttons original">
@@ -28,7 +28,7 @@ const Banner = () => {
             <button className='small__button'><BsArrowDown /></button>
         </div>
 
-    </div>
+    </section>
   )
 }
 
