@@ -1,5 +1,5 @@
 import './App.scss'
-import { About, Banner, Menu, Product, Project } from './components'
+import { About, Banner, Footer, Menu, Product, Project, Services } from './components'
 
 function App() {
 
@@ -10,6 +10,9 @@ function App() {
       <About />
       <Product />
       <Project />
+      <Services />
+      <Footer />
+      <Menu />
     </div>
   )
 }

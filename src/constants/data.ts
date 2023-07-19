@@ -41,5 +41,20 @@ const projects = [
   }
 ];
 
+const services = [
+  {
+    img: images.more_1
+  },
+  {
+    img: images.more_2
+  },
+  {
+    img: images.more_3
+  },
+  {
+    img: images.more_4
+  },
+]
 
-export default { about, projects };
+
+export default { about, projects, services };
