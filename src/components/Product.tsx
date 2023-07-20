@@ -1,20 +1,23 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { BsFillPlayFill, BsPauseFill, BsArrowRight } from 'react-icons/bs';
 import {room} from "../constants"
 
+
 const Product = () => {
-    const [playVideo, setplayVideo] = React.useState(false)
-  const vidRef = React.useRef();
+  const [playVideo, setplayVideo] = React.useState(false)
+  const vidRef = useRef<HTMLInputElement | any>();
 
   const handleVideo = () => {
     setplayVideo((prevPlayVideo) => !prevPlayVideo)
 
+    if (vidRef.current != null) {
     if(playVideo){
       vidRef.current.pause();
     }else {
       vidRef.current.play();
     }
   }
+}
   return (
 
     <section className='product section__padding'>
@@ -31,8 +34,6 @@ const Product = () => {
       <video 
         src={room} 
         ref = {vidRef}
-        type="video/mp4"
-        Loop
         controls={false}
         muted
       />
