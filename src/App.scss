@@ -102,9 +102,6 @@ menu {
         .app__navbar-links{
             display: none;
         }
-        // .menu_smallscreen{
-        //     display: flex;
-        // }
     }
     
     @media screen and (max-width: 650px){
@@ -244,7 +241,7 @@ menu {
             height: 100%;
             max-width: 23rem;
             max-height: 30rem;
-            top: 16.3rem;
+            top: 17.13rem;
             right: 12rem;
             transform: scaleX(-1);
             z-index: -999;
@@ -622,6 +619,7 @@ menu {
 
                 .list {
                     align-items: end;
+                    text-align: right;
                     
                     p {
                         max-width: 5rem;
@@ -742,6 +740,7 @@ menu {
         flex: 6;
         height: 60vh;
         position: relative;
+        z-index: 1000;
 
         video{
             width: 100%;
